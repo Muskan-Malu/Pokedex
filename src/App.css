@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+  /* margin-top: 20px;
+  margin-left: 35px;
+  margin-right: 35px; */
+  /* background-image: url("https://cutewallpaper.org/cdn-cgi/mirage/dd19f2d…/1280/21/pokemon-scenery-background/Pokemon-forest-by-BlazingIfrit-Fur-Affinity-dot-net.jpg"); */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  background-image: url("https://img.freepik.com/premium-vector/blue-sky-with-white-clouds-clear-sunny-day_136277-267.jpg?w=2000");
+  overflow: hidden;
+  /* color: white; */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

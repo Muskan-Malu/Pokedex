@@ -1,0 +1,312 @@
+.BattleContainer {
+    /* text-align: center; */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.BattleHeader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.set div{
+    position: absolute;
+    display: block;
+}
+
+.set div:nth-child(1) {
+    top: 30%;
+    /* left: 25%; */
+    left: 1%;
+    animation: animate1 1s linear 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.set div:nth-child(2) {
+    /* left: 92.5%; */
+    top: 30%;
+    /* left: 66%; */
+    left: 92%;
+    animation: animate2 1s linear 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.set div:nth-child(3) {
+    top: 100%;
+    animation: OpenPokeballAnimate1 0s linear 1.3s;
+    animation-fill-mode: forwards;
+}
+
+.set div:nth-child(4) {
+    top: 100%;
+    animation: OpenPokeballAnimate2 0s linear 1.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes OpenPokeballAnimate1 {
+    from
+    {
+        visibility: hidden;
+        top: 100%;
+    }
+    to
+    {
+        top: 83%;
+        left: 22%
+    }
+}
+
+@keyframes OpenPokeballAnimate2 {
+    from
+    {
+        visibility: hidden;
+        top: 100%;
+    }
+    to
+    {
+        top: 83%;
+        left: 70%;
+    }
+}
+
+@keyframes animate1
+{
+    0%
+    {
+        top: 30%;
+        transform: translate(3%, 30%) rotate(0deg);
+    }
+    20%
+    {
+        transform: translate(7.5%, 41%) rotate(72deg);
+    }
+    40%
+    {
+        transform: translate(15.5%, 52%) rotate(144deg);
+    }
+    60%
+    {
+        transform: translate(17%, 63%) rotate(216deg);
+    }
+    80%
+    {
+        transform: translate(22%, 76%) rotate(324deg);
+    }
+    100%
+    {
+        top: 85%;
+        left: 22%;
+        transform: rotate(360deg);
+    }
+    to
+    {
+        visibility: hidden;
+    }
+}
+
+@keyframes animate2
+{
+    0%
+    {
+        top: 30%;
+        transform: rotate(0deg);
+    }
+    20%
+    {
+        transform: translate(84%, 41%) rotate(72deg);
+    }
+    40%
+    {
+        transform: translate(78%, 52%) rotate(144deg);
+    }
+    60%
+    {
+        transform: translate(70%, 63%) rotate(216deg);
+    }
+    80%
+    {
+        transform: translate(66%, 79.5%) rotate(324deg);
+    }
+    100%
+    {
+        top: 85%;
+        left: 70%;
+        transform: rotate(360deg);
+    }
+    to
+    {
+        visibility: hidden;
+    }
+
+}
+
+.CardContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+}
+
+.Cards {
+    top: 150%;
+    background: rgba(255, 255, 255, 0.5);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 550px;
+    border-radius: 25px;
+    box-shadow: 0 2px 7px 1px rgba(31, 31, 31, 0.6);
+    animation: CardAnimation 0.7s ease-in 1.4s;
+    animation-fill-mode: forwards;
+}
+
+.Cards .ant-card-cover {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.PokeDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 10px;
+}
+
+@keyframes CardAnimation {
+    1%
+    {
+        top: 70%;
+        width: 0;
+        height: 0;
+    }
+    100%
+    {
+        top: 0%;
+        width: 350px;
+        height: 450px;
+        transform: rotate(360deg);
+    }
+}
+
+.AbilitiesAndWeakness {
+    width: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.AbilitiesAndWeaknessCards {
+    /* width: 140px;
+    height: 100px; */
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 1px rgba(31, 31, 31, 0.6);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.BattleButton {
+    background-color: rgb(223 33 45 / 70%);
+    border-color: 2px solid #d9d9d9;
+    box-shadow: 0 2px 7px 1px rgb(43 36 36 / 70%);
+    left: 670px;
+    padding: 32px;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 100px;
+    height: 100px;
+    color: white;
+    top: 100%;
+    animation: BattleButtonAnimate 1s ease-in-out 2s;
+    animation-fill-mode: forwards;
+}
+
+.BattleButton:hover {
+    scale: 1.1;
+    background-color: rgba(223, 33, 45, 0.9);
+    border-color: 2px solid #d9d9d9;
+    text-decoration: none;
+}
+
+@keyframes BattleButtonAnimate {
+    from {
+        visibility: hidden;
+        top: 100%;
+    }
+    to {
+        top: 0%;
+        transform: rotate(360%);
+    }
+}
+
+.WinnerContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    top: 2%;
+    padding: 20px;
+}
+
+.WinnerCards {
+    top: 150%;
+    background: rgba(255, 255, 255, 0.5);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 550px;
+    border-radius: 25px;
+    box-shadow: 0 2px 7px 1px rgba(31, 31, 31, 0.6);
+    animation: WinnerCardAnimation 0.7s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.WinnerCards .ant-card-cover {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes WinnerCardAnimation {
+    1%
+    {
+        top: 70%;
+        width: 0;
+        height: 0;
+    }
+    100%
+    {
+        top: 0%;
+        width: 350px;
+        height: 450px;
+        transform: rotate(360deg);
+    }
+}
