@@ -10,6 +10,9 @@
     height: 100%;
     position: absolute;
     overflow: hidden;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around; */
 }
 
 .set {
@@ -264,6 +267,15 @@
     }
 }
 
+.CardContainer1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+}
+
 .WinnerContainer {
     display: flex;
     position: relative;
@@ -309,4 +321,55 @@
         height: 450px;
         transform: rotate(360deg);
     }
+}
+
+.SideCard {
+    border-radius: 10px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    outline: none;
+    padding: 30px;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 28px;
+    background-color: rgba(255,255, 255, 0.6);
+    border: 2px solid white;
+    box-shadow: 0 2px 1px 2px rgb(96 86 86 / 30%);
+}
+
+.SideTxt {
+    outline: none;
+    padding: 25px;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 28px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.SideButton {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px;
+    font-size: 18px;
+    background-color: #4b97c2;
+    border-color: #dad8d8;
+    box-shadow: 0 2px 4px 0px rgb(159 149 149 / 70%);
+    border: 2px solid #ffffff;
+}
+
+.WinnerContainer1 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 40px;
+    /* top: 2%; */
+    padding: 10px;
 }
